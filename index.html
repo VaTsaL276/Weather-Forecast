@@ -1,0 +1,181 @@
+                                    <!-- Vatsal Bhalani -->
+                                    <!-- WD-07-MLB1 -->
+                                    <!-- WD-MAJOR-JULY-(WD-07-MLB1) -->
+                                    <!-- vatsalbhalani7@gmail.com -->
+
+<!-- Index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>Weather Forecast</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="DefaultScreen()">
+    <div align="center">
+        <h1 id="Para1" class="head" style="text-transform: uppercase; margin-top: 0px;">Weather Forecast</h1><br>
+        <form class="example">
+            <p id="inputContainer"><input type="text" class="Search tempmin_max" id="cityInput" name="search" style="color: #000000;">
+            <button class="tempmin_max btn" type="button" onclick="GetInfo()"><i class="fa fa-search"></i> Search</button><br><br>
+        </form><br> 
+        <h5>
+            <span>
+                <h2 class="temp" id="cityName" style="text-transform: uppercase; color: #0b7dda;">- - - Enter City name - - -</h2>
+                <h1 class="tempmin_max" id="date1" style="margin-Top: 0px">day...</h1>
+            </span>
+        </h5>  
+        
+    </div><br>
+  
+    <div class="container">
+
+            <div class="box" align="center">
+                <h1 class="temp" id="day1" style="color: whitesmoke ;background-color: #0b7dda; margin-Top: 0px">day...</h1><br>
+                <h1 id="img1" class="image"> <i class="fa-solid fa-sun" style="color: #FCE570;"></i></h1>
+                <h1 class="temp" id="type1" style="color: #0b7dda;">Cloudy...</h1><br>
+                <h1 class="temp" id="temp1"><i class="fa-solid fa-temperature-three-quarters"></i> Temperature</h1>
+                <p class="tempmin_max" id="day1Min">Min : </p>
+                <p class="tempmin_max" id="day1Max">Max : </p>
+                <h1 class="temp"><i class="fa-solid fa-wind"></i>  Wind </h1>
+                <p class="tempmin_max" id="wind1"></p>
+                <h4 class="temp"><i class="fa-solid fa-droplet"></i>  Humidity </h4>     
+                <h1 class="tempmin_max" id="humidity1"></h1>     
+            </div>
+
+
+            <div class="box info" align="center">
+                <h1 class="temp" id="day2" style="color: whitesmoke ;background-color: #0b7dda; margin-Top: 0px">day...</h1><br>
+                <h1 id="img2" class="image"> <i class="fa-solid fa-sun" style="color: #FCE570;"></i></h1>
+                <h1 class="temp" id="type2" style="color: #0b7dda;">Cloudy...</h1><br>
+                <h1 class="temp" id="temp2"><i class="fa-solid fa-temperature-three-quarters"></i> Temperature</h1>   
+                <p class="tempmin_max" id="day2Min">Min : </p>
+                <p class="tempmin_max" id="day2Max">Max : </p>
+                <h1 class="temp info"><i class="fa-solid fa-wind"></i>  Wind </h1>
+                <h1 class="tempmin_max" id="wind2"></h1>
+                <h4 class="temp"><i class="fa-solid fa-droplet"></i>  Humidity </h4>
+                <h1 class="tempmin_max" id="humidity2"></h1>
+            </div>
+
+
+            <div class="box info" align="center">
+                <h1 class="temp" id="day3" style="color: whitesmoke ;background-color: #0b7dda; margin-Top: 0px">day...</h1><br>
+                <h1 id="img3" class="image"> <i class="fa-solid fa-sun" style="color: #FCE570;"></i></h1>
+                <h1 class="temp" id="type3" style="color: #0b7dda;">Cloudy...</h1><br>
+                <h1 class="temp" id="temp3"><i class="fa-solid fa-temperature-three-quarters"></i> Temperature</h1>
+                <p class="tempmin_max" id="day3Min">Min : </p>
+                <p class="tempmin_max" id="day3Max">Max : </p>
+                <h1 class="temp info"><i class="fa-solid fa-wind"></i>  Wind </h1>
+                <h1 class="tempmin_max" id="wind3"></h1>
+                <h4 class="temp" ><i class="fa-solid fa-droplet"></i>  Humidity </h4>
+                <h1 class="tempmin_max" id="humidity3"></h1>
+            </div>
+
+
+            <div class="box info" align="center">
+                <h1 class="temp" id="day4" style="color: whitesmoke ;background-color: #0b7dda; margin-Top: 0px">day...</h1><br>
+                <h1 id="img4" class="image"> <i class="fa-solid fa-sun" style="color: #FCE570;"></i></h1>
+                <h1 class="temp" id="type4" style="color: #0b7dda;">Cloudy...</h1><br>
+                <h1 class="temp" id="temp4"><i class="fa-solid fa-temperature-three-quarters"></i> Temperature</h1>
+                <p class="tempmin_max" id="day4Min">Min : </p>
+                <p class="tempmin_max" id="day4Max">Max : </p>
+                <h1 class="temp info"><i class="fa-solid fa-wind"></i>  Wind </h1>
+                <h1 class="tempmin_max" id="wind4"></h1>
+                <h4 class="temp"><i class="fa-solid fa-droplet"></i>  Humidity </h4>
+                <h1 class="tempmin_max" id="humidity4"></h1>
+            </div>
+
+
+            <div class="box info" align="center">
+                <h1 class="temp" id="day5" style="color: whitesmoke ;background-color: #0b7dda; margin-Top: 0px">day...</h1><br>
+                <h1 id="img5" class="image"> <i class="fa-solid fa-sun" style="color: #FCE570;"></i></h1>
+                <h1 class="temp" id="type5" style="color: #0b7dda;">Cloudy...</h1><br>
+                <h1 class="temp" id="temp5"><i class="fa-solid fa-temperature-three-quarters"></i> Temperature</h1>
+                <p class="tempmin_max" id="day5Min">Min : </p>
+                <p class="tempmin_max" id="day5Max">Max : </p>
+                <h1 class="temp info"><i class="fa-solid fa-wind"></i>  Wind </h1>
+                <h1 class="tempmin_max" id="wind5"></h1>
+                <h4 class="temp" ><i class="fa-solid fa-droplet"></i>  Humidity </h4>
+                <h1 class="tempmin_max" id="humidity5"></h1>
+            </div>
+
+    </div>
+
+    <script>
+
+        // WeekDay Starts
+        const day_1 = document.getElementById("day1");
+        const weekday = ["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY","SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"];
+        function getDay1(){
+            let currentTime = new Date();
+            let day = weekday[currentTime.getDay()];
+            return day;
+        };
+        getDay1();
+        day_1.innerHTML = getDay1()
+
+        const day_2 = document.getElementById("day2");
+        function getDay2(){    
+            let currentTime = new Date();
+            let day = weekday[currentTime.getDay()+1];
+            return day;
+        };
+        getDay2();
+        day_2.innerHTML = getDay2();
+
+        const day_3 = document.getElementById("day3");
+        function getDay3(){
+            let currentTime = new Date();
+            let day = weekday[currentTime.getDay()+2];
+            return day;
+        };
+        getDay3();
+        day_3.innerHTML = getDay3();
+
+        const day_4 = document.getElementById("day4");
+        function getDay4(){
+            let currentTime = new Date();
+            let day = weekday[currentTime.getDay()+3];
+            return day;
+        };
+        getDay4();
+        day_4.innerHTML = getDay4();
+        
+        const day_5 = document.getElementById("day5");
+        function getDay5(){
+            
+            let currentTime = new Date();
+            let day = weekday[currentTime.getDay()+4];
+            return day;
+        };
+        getDay5();
+        day_5.innerHTML = getDay5();
+        // Weekday ends
+
+
+        const Date1 = document.getElementById("date1");
+        function getCurrentMonth_date(){
+            var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+            var now = new Date();
+            var month = months[now.getMonth()];
+            var date = now.getDate();
+
+           let month1 = (month + " | " + date);
+           return month1;
+        };
+        getCurrentMonth_date()
+        Date1.innerHTML = getCurrentMonth_date()+ " | "+ getDay1();
+
+
+    </script>
+       
+</body>
+</html>
